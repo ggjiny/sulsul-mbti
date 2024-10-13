@@ -22,7 +22,7 @@ const useKakaoShare = () => {
 
   const shareKakao = () => {
     const kakao = window.Kakao;
-    const shareUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
+    const shareUrl = typeof window !== 'undefined' ? window.location.origin : '';
 
     kakao.Share.sendDefault({
       objectType: 'feed',
