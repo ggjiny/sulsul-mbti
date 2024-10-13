@@ -12,6 +12,3 @@ export { default as RedoIcon } from './icon-redo.svg';
 
 export { default as KakaoIcon } from './btn-kakao.svg';
 export { default as LinkIcon } from './btn-link.svg';
-
-export { default as TitleImg } from './title.svg';
-export { default as TitleImg2 } from './title2.svg';
