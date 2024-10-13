@@ -1,8 +1,16 @@
+import useKakaoShare from '@/hooks/useKakaoShare';
 import { KakaoIcon, LinkIcon } from '@/public/svg';
 import { useState } from 'react';
 
 export default function ShareButtons() {
   const [isCopied, setIsCopied] = useState(false);
+
+  const { shareKakao } = useKakaoShare('https://sulsul-mbti.vercel.app/');
+
+  const handleKakaoIconClick = () => {
+    console.log('kako');
+    shareKakao();
+  };
 
   const handleLinkIconClick = async () => {
     try {
@@ -19,7 +27,12 @@ export default function ShareButtons() {
       <div className="mx-auto mb-10 w-fit">
         <h4 className="mb-4 text-3xl font-bold text-gray-800">내 결과 공유하기</h4>
         <div className="flex gap-3">
-          <KakaoIcon width={48} height={48} className="cursor-pointer" />
+          <KakaoIcon
+            width={48}
+            height={48}
+            className="cursor-pointer"
+            onClick={handleKakaoIconClick}
+          />
           <LinkIcon
             width={48}
             height={48}

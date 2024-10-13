@@ -1,5 +1,6 @@
 import { gmarketSans, pretendard } from '@/lib/fonts';
 import Head from 'next/head';
+import Script from 'next/script';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,6 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className={`relative mx-auto max-w-[500px] ${pretendard} ${gmarketSans.variable}`}>
         {children}
       </div>
+      <Script src="https://developers.kakao.com/sdk/js/kakao.js" strategy="afterInteractive" />
     </>
   );
 }
