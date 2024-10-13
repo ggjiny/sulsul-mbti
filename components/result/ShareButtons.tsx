@@ -5,10 +5,9 @@ import { useState } from 'react';
 export default function ShareButtons() {
   const [isCopied, setIsCopied] = useState(false);
 
-  const { shareKakao } = useKakaoShare('https://sulsul-mbti.vercel.app/');
+  const { shareKakao } = useKakaoShare();
 
   const handleKakaoIconClick = () => {
-    console.log('kako');
     shareKakao();
   };
 

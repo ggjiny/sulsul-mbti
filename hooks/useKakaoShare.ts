@@ -9,7 +9,7 @@ declare global {
   }
 }
 
-const useKakaoShare = (shareUrl: string) => {
+const useKakaoShare = () => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const kakao = window.Kakao;
@@ -22,14 +22,14 @@ const useKakaoShare = (shareUrl: string) => {
 
   const shareKakao = () => {
     const kakao = window.Kakao;
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    const shareUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
 
     kakao.Share.sendDefault({
       objectType: 'feed',
       content: {
         title: '[Sulsul] 취준유형 테스트',
         description: '내 취준 스타일로 알아보는 취준 꿀팁',
-        imageUrl: `${baseUrl}/images/OG.png`,
+        imageUrl: `${shareUrl}/images/OG.png`,
         link: {
           mobileWebUrl: shareUrl,
           webUrl: shareUrl,
