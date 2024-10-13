@@ -35,7 +35,7 @@ export default function CardSection({ type }: { type: MBTIType }) {
         return '#FF7278';
     }
   };
-  const imageUrl = `/images/${type}.png`;
+  const imageUrl = `/images/${type.toLowerCase()}.png`;
 
   return (
     <div className={`relative mb-9 w-full ${isScrolled ? 'pt-20' : ''}`}>
