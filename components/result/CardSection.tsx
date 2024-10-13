@@ -35,6 +35,7 @@ export default function CardSection({ type }: { type: MBTIType }) {
         return '#FF7278';
     }
   };
+  const imageUrl = `/images/${type}.png`;
 
   return (
     <div className={`relative mb-9 w-full ${isScrolled ? 'pt-20' : ''}`}>
@@ -53,13 +54,15 @@ export default function CardSection({ type }: { type: MBTIType }) {
               {typeResult[type].title}
             </h1>
           </div>
-          <Image
-            src={`/images/${type}.png`}
-            alt="카드 이미지"
-            width={163}
-            height={132}
-            className="mx-auto"
-          />
+          <div className="relative mx-auto h-[132px] w-[163px]">
+            <Image
+              src={imageUrl}
+              alt="카드 이미지"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-contain"
+            />
+          </div>
         </div>
       </div>
     </div>
