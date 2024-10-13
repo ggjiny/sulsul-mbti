@@ -10,7 +10,15 @@ export default function Buttons() {
         target="_blank"
         className="flex items-center justify-center gap-[6px] rounded-[27px] bg-blue-500 py-3"
       >
-        <Image src={'/images/sulsul.png'} alt="sulsul" width={66} height={16} />
+        <div className="relative h-[20px] w-[66px]">
+          <Image
+            src="/images/sulsul.png"
+            alt="sulsul"
+            fill
+            sizes="15vw"
+            className="object-contain"
+          />
+        </div>
         <span className="text-lg font-bold text-white">바로가기</span>
       </Link>
       <Link

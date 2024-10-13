@@ -1,7 +1,7 @@
 'use client';
 
-import logoColorImg from '@/public/images/main/Logo-color.png';
-import logoImg from '@/public/images/main/Logo.png';
+import logoColorImg from '@/public/images/main/color-logo.png';
+import logoImg from '@/public/images/main/logo.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -40,13 +40,15 @@ export default function Header() {
 
   return (
     <div className={headerClass}>
-      <Image
-        src={isScrolled ? logoColorImg : logoImg}
-        alt="logo title"
-        width={92}
-        height={22}
-        className="transition-opacity duration-300 ease-in-out"
-      />
+      <div className="relative h-[22px] w-[92px] transition-opacity duration-300 ease-in-out">
+        <Image
+          src={isScrolled ? logoColorImg : logoImg}
+          alt="logo title"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-contain"
+        />
+      </div>
       <Link href="https://www.sulsul-interview.kr" target="_blank" className={buttonClass}>
         <span className="text-xs font-semibold text-white">술술 바로가기</span>
       </Link>

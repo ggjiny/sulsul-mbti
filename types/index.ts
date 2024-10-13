@@ -42,15 +42,12 @@ export interface Kakao {
       objectType: string;
       content: {
         title: string;
+        description: string;
         imageUrl: string;
         link: {
           mobileWebUrl: string;
           webUrl: string;
         };
-      };
-      commerce: {
-        productName: string;
-        regularPrice: number;
       };
       buttons: [
         {

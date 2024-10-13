@@ -6,7 +6,6 @@ export { default as ProfileImg } from './profile.svg';
 export { default as BulbIcon } from './icon-bulb.svg';
 export { default as GraphIcon } from './icon-graph.svg';
 
-export { default as LayerImg } from './layer.svg';
 export { default as SulsulImg } from './sulsul.svg';
 
 export { default as RedoIcon } from './icon-redo.svg';

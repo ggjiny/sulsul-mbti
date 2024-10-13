@@ -2,9 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import Header from '@/components/Header';
-import cardImg from '@/public/images/main/카드.png';
-import keywordImg from '@/public/images/main/키워드.png';
-import titleImg from '@/public/images/main/타이틀.png';
 import api from '@/utils/api';
 
 export async function getServerSideProps() {
@@ -31,13 +28,34 @@ export default function HomePage({ data }: HomePageProps) {
   return (
     <div className="relative min-h-screen bg-[url('/images/main/배경.png')] bg-cover bg-center">
       <Header />
-      <Image
-        src={keywordImg}
-        alt="keyword"
-        className="absolute inset-x-0 top-[85px] z-0 w-full"
-      />
-      <Image src={titleImg} alt="title" className="relative z-10 mx-auto mt-4" />
-      <Image src={cardImg} alt="card" className="relative z-10 mx-auto -mt-12" />
+      <div className="absolute inset-x-0 top-[85px] z-0 h-[320px] w-full">
+        <Image
+          src="/images/main/keyword.png"
+          alt="keyword"
+          className="object-cover"
+          fill
+          sizes="(max-width: 500px) 100vw, 500px"
+          priority
+        />
+      </div>
+      <div className="relative z-10 mx-auto mt-4 h-[200px] w-full">
+        <Image
+          src="/images/main/title.png"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          alt="title"
+          className="object-contain"
+        />
+      </div>
+      <div className="relative z-10 mx-auto -mt-12 h-[310px] w-full">
+        <Image
+          src="/images/main/card.png"
+          alt="card"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-contain"
+        />
+      </div>
       <div className="mx-auto max-w-[335px] ">
         <Link href="/test">
           <button className="w-full rounded-[45px] bg-[#39FFFB] pb-3 pt-4">
