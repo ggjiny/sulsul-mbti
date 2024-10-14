@@ -29,7 +29,7 @@ const useKakaoShare = () => {
       content: {
         title: '[Sulsul] 취준유형 테스트',
         description: '내 취준 스타일로 알아보는 취준 꿀팁',
-        imageUrl: `${shareUrl}/images/OG.png`,
+        imageUrl: `${shareUrl}/images/main.png`,
         link: {
           mobileWebUrl: shareUrl,
           webUrl: shareUrl,
