@@ -23,9 +23,9 @@ export default function ShareButtons() {
 
   return (
     <>
-      <div className="mx-auto mb-10 w-fit">
-        <h4 className="mb-4 text-3xl font-bold text-gray-800">내 결과 공유하기</h4>
-        <div className="flex gap-3">
+      <div className="mx-auto mb-10 w-fit ">
+        <h4 className="mb-4 text-3xl font-bold text-gray-800">취준유형 테스트 공유하기</h4>
+        <div className="flex justify-center gap-3">
           <KakaoIcon
             width={48}
             height={48}

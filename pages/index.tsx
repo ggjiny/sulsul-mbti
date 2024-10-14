@@ -28,7 +28,7 @@ export default function HomePage({ data }: HomePageProps) {
   return (
     <div className="relative min-h-screen bg-[url('/images/main/배경.png')] bg-cover bg-center">
       <Header />
-      <div className="absolute inset-x-0 top-[85px] z-0 h-[320px] w-full">
+      <div className="absolute inset-x-0 top-[70px] z-0 h-[380px] w-auto">
         <Image
           src="/images/main/keyword.png"
           alt="keyword"
@@ -60,12 +60,12 @@ export default function HomePage({ data }: HomePageProps) {
         <Link href="/test">
           <button className="w-full rounded-[45px] bg-[#39FFFB] pb-3 pt-4">
             <span className="h-[17px] align-top font-gmarket-sans text-[17px] font-bold tracking-tighter text-[#3B54FF]">
-              내 취준 유형 알아보기
+              내 취준유형 알아보기
             </span>
           </button>
         </Link>
         <div className="mt-3 w-full text-center font-gmarket-sans text-sm tracking-tight text-white">
-          지금까지 <span className="font-bold">{data.totalCount}명</span>이 다녀갔어요!
+          지금까지 <span className="font-bold">{data.totalCount}번 </span>플레이 됐어요!
         </div>
       </div>
     </div>

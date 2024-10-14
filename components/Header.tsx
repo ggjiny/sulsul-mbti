@@ -34,7 +34,7 @@ export default function Header() {
 
   const buttonClass = `
     rounded-md px-3 py-2
-    transition-all duration-300 ease-in-out
+    transition-all duration-300 ease-in-out flex
     ${isScrolled ? 'bg-gray-800' : 'bg-white bg-opacity-[0.16]'}
   `;
 

@@ -23,15 +23,15 @@ export default function RecommendSection() {
             무료로 시작하기
           </button>
         </div>
-        <div className="absolute bottom-0 right-0 h-[220px] w-[300px]">
-          <Image
-            src="/images/layer.png"
-            alt="layer"
-            fill
-            className="object-cover"
-            sizes="40vw"
-          />
-        </div>
+        <Image
+          src="/images/layer.png"
+          alt="layer"
+          width={384}
+          height={266}
+          className="absolute bottom-0 right-0 h-[210px] w-auto rounded-br-xl object-contain"
+          sizes="(max-width: 768px) 30vw, 300px"
+          unoptimized
+        />
       </div>
     </div>
   );

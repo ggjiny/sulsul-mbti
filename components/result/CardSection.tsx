@@ -44,7 +44,7 @@ export default function CardSection({ type }: { type: MBTIType }) {
         className="absolute inset-x-0 top-0 h-auto w-full"
       />
       <Header />
-      <div className="mx-auto mt-4 h-[330px] w-[255px] rounded-md bg-white p-[18px] drop-shadow">
+      <div className="mx-auto mt-4 h-[330px] w-[255px] rounded-md bg-white p-[18px] shadow-md drop-shadow-none">
         <div className="h-full rounded-[14px] bg-[#f6f7fb]">
           <div className=" mx-auto mb-[34px] flex flex-col justify-center gap-[6px] text-center">
             <h2 className="mt-[38px] h-[18px] align-top font-gmarket-sans text-[18px] font-medium tracking-tighter text-gray-800">

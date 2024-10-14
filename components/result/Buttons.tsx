@@ -10,12 +10,12 @@ export default function Buttons() {
         target="_blank"
         className="flex items-center justify-center gap-[6px] rounded-[27px] bg-blue-500 py-3"
       >
-        <div className="relative h-[20px] w-[66px]">
+        <div className="relative h-[16px] w-[64px]">
           <Image
             src="/images/sulsul.png"
             alt="sulsul"
             fill
-            sizes="15vw"
+            sizes="66px"
             className="object-contain"
           />
         </div>
