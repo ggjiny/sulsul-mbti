@@ -22,16 +22,8 @@ export default function Question({ question, onAnswer }: QuestionProps) {
   }, [question]);
 
   return (
-    <div
-      className={`m-5 transition-all duration-700 ease-out ${
-        animate ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
-      }`}
-    >
-      <div
-        className={`mb-[30px] flex items-start gap-1.5 transition-all delay-100 duration-500 ${
-          animate ? 'translate-y-0 opacity-100' : 'translate-y-0 opacity-0'
-        }`}
-      >
+    <div className="m-5">
+      <div className={`mb-[30px] flex items-start gap-1.5`}>
         <ProfileImg className="size-9" alt="수리 프로필" />
         <div>
           <span className="text-2xs font-medium text-gray-600">수리</span>
