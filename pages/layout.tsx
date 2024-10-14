@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <title>[Sulsul] 취준유형 테스트</title>
       </Head>
       <div
-        className={`relative mx-auto max-w-[500px] ${pretendard.variable} ${gmarketSans.variable}`}
+        className={`relative mx-auto max-w-[500px] ${pretendard.variable} ${gmarketSans.variable} font-sans`}
       >
         {children}
       </div>
