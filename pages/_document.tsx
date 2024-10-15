@@ -17,7 +17,7 @@ export default function Document() {
           crossOrigin="anonymous"
         />
       </Head>
-      <body className="antialiased">
+      <body className="relative min-h-screen antialiased">
         <Main />
         <NextScript />
         <script
