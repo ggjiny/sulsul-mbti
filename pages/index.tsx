@@ -28,13 +28,12 @@ export default function HomePage({ data }: HomePageProps) {
   return (
     <div className="relative min-h-screen bg-[url('/images/main/배경.png')] bg-cover bg-center">
       <Header />
-      <div className="absolute inset-x-0 top-[70px] z-0 h-[380px] w-auto">
+      <div className="absolute inset-x-0 top-[70px] z-0 h-[304px] w-auto">
         <Image
           src="/images/main/keyword.png"
           alt="keyword"
-          className="object-cover"
           fill
-          sizes="(max-width: 500px) 100vw, 500px"
+          sizes="(max-width: 400px) 100vw, 350px"
           priority
         />
       </div>
