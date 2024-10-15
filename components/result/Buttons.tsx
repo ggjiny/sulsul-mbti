@@ -22,7 +22,7 @@ export default function Buttons() {
         <span className="text-lg font-bold text-white">바로가기</span>
       </Link>
       <Link
-        href="/test"
+        href="/"
         className="flex items-center justify-center gap-[6px] rounded-[27px] border border-gray-400  bg-white py-3 text-center"
       >
         <RedoIcon />
