@@ -16,6 +16,7 @@ export default function Document() {
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <link rel="icon" href="favicon.svg" />
       </Head>
       <body className="relative min-h-screen antialiased">
         <Main />
