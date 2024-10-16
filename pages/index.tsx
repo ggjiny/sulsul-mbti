@@ -35,6 +35,7 @@ export default function HomePage({ data }: HomePageProps) {
           fill
           sizes="(max-width: 400px) 100vw, 350px"
           priority
+          className="object-cover"
         />
       </div>
       <div className="relative z-10 mx-auto mt-4 h-[200px] w-full">
@@ -64,7 +65,7 @@ export default function HomePage({ data }: HomePageProps) {
           </button>
         </Link>
         <div className="mt-3 w-full text-center font-gmarket-sans text-sm tracking-tight text-white">
-          지금까지 <span className="font-bold">{data.totalCount}번 </span>플레이 됐어요!
+          지금까지 <span className="font-bold">{data.totalCount}번 </span>플레이됐어요!
         </div>
       </div>
     </div>
