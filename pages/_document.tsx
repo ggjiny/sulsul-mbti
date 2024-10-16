@@ -18,7 +18,7 @@ export default function Document() {
         />
         <link rel="icon" href="favicon.svg" />
       </Head>
-      <body className="relative min-h-screen antialiased">
+      <body className={`relative min-h-screen antialiased ${pretendard.className} font-sans`}>
         <Main />
         <NextScript />
         <script
