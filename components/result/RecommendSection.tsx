@@ -1,5 +1,6 @@
 import { GraphIcon } from '@/public/svg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function RecommendSection() {
   return (
@@ -19,9 +20,13 @@ export default function RecommendSection() {
             <hr />
             면접 단골 기출문제까지!
           </div>
-          <button className="w-[114px] rounded-md bg-gray-800 px-4 py-[10px] text-xs text-white">
-            무료로 시작하기
-          </button>
+          <Link
+            href="https://www.sulsul-interview.kr"
+            target="_blank"
+            className="w-fit rounded-md bg-gray-800 px-4 py-[10px] text-xs font-semibold text-white"
+          >
+            지금 시작하기
+          </Link>
         </div>
         <Image
           src="/images/layer.png"
