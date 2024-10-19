@@ -23,7 +23,7 @@ export default function RecommendSection() {
           <Link
             href="https://www.sulsul-interview.kr"
             target="_blank"
-            className="w-fit rounded-md bg-gray-800 px-4 py-[10px] text-xs font-semibold text-white"
+            className="z-10 w-fit rounded-md bg-gray-800 px-4 py-[10px] text-xs font-semibold text-white"
           >
             지금 시작하기
           </Link>
