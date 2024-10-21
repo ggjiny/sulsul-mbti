@@ -10,12 +10,14 @@ export default function Document() {
         <meta property="og:description" content="내 취준 스타일로 알아보는 취준 꿀팁" />
         <meta property="og:image" content="/images/OG.png" />
         <link
-          rel="preload"
           href="/fonts/PretendardVariable.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <link rel="preconnet" href="https://pagead2.googlesyndication.com" />
+        <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
+        <link rel="preconnect" href="https://www.google.com" />
         <link rel="icon" href="favicon.svg" />
       </Head>
       <body className={`relative min-h-screen antialiased ${pretendard.className} font-sans`}>

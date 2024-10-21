@@ -26,16 +26,18 @@ interface HomePageProps {
 }
 export default function HomePage({ data }: HomePageProps) {
   return (
-    <div className="relative min-h-screen bg-[url('/images/main/배경.png')] bg-cover bg-center">
+    <div className="relative min-h-screen bg-gradient-to-b from-blue-500 to-[#3B54FF]">
       <Header />
       <div className="absolute inset-x-0 top-[70px] z-0 h-[304px] w-auto">
         <Image
           src="/images/main/keyword.png"
           alt="keyword"
-          fill
-          sizes="(max-width: 400px) 100vw, 350px"
+          width={500}
+          height={304}
+          sizes="(max-width: 500px) 100vw, 500px"
           priority
-          className="object-cover"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
         />
       </div>
       <div className="relative z-10 mx-auto mt-4 h-[200px] w-full">

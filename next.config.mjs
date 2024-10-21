@@ -3,20 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'http',
-        hostname: '**',
-        port: '',
-        pathname: '/**',
-      },
-    ],
+    formats: ['image/avif', 'image/webp'],
   },
 
   webpack(config) {
