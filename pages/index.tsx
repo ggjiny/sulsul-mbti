@@ -28,7 +28,7 @@ export default function HomePage({ data }: HomePageProps) {
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-blue-500 to-[#3B54FF]">
       <Header />
-      <div className="absolute inset-x-0 top-[70px] z-0 h-[304px] w-auto">
+      <div className="absolute inset-x-0 top-[70px]">
         <Image
           src="/images/main/keyword.png"
           alt="keyword"
@@ -47,6 +47,8 @@ export default function HomePage({ data }: HomePageProps) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt="title"
           className="object-contain"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
         />
       </div>
       <div className="relative z-10 mx-auto -mt-12 h-[310px] w-full">
@@ -56,6 +58,8 @@ export default function HomePage({ data }: HomePageProps) {
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-contain"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
         />
       </div>
       <div className="mx-auto max-w-[335px] ">
@@ -66,9 +70,11 @@ export default function HomePage({ data }: HomePageProps) {
             </span>
           </button>
         </Link>
-        <div className="mt-3 w-full text-center font-gmarket-sans text-sm tracking-tight text-white">
-          지금까지 <span className="font-bold">{data.totalCount}번 </span>플레이됐어요!
-        </div>
+        {data && (
+          <div className="mt-3 w-full text-center font-gmarket-sans text-sm tracking-tight text-white">
+            지금까지 <span className="font-bold">{data.totalCount}번 </span>플레이됐어요!
+          </div>
+        )}
       </div>
     </div>
   );

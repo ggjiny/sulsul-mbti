@@ -15,7 +15,7 @@ export default function Document() {
           type="font/woff2"
           crossOrigin="anonymous"
         />
-        <link rel="preconnet" href="https://pagead2.googlesyndication.com" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
         <link rel="preconnect" href="https://googleads.g.doubleclick.net" />
         <link rel="preconnect" href="https://www.google.com" />
         <link rel="icon" href="favicon.svg" />
