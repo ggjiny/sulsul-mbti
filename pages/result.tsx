@@ -1,6 +1,5 @@
 import ResultClient from '@/components/result/ResultClient';
 import { MBTIType } from '@/types';
-import api from '@/utils/api';
 import calculateResult from '@/utils/calculateResult';
 import { GetServerSideProps } from 'next';
 
@@ -14,12 +13,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         permanent: false,
       },
     };
-  }
-
-  try {
-    await api.get('/api/v1/job-type-test/visit');
-  } catch (error) {
-    console.error('Error fetching data:', error);
   }
 
   const answersString = Array.isArray(answers) ? answers.join('') : answers;
