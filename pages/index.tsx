@@ -1,27 +1,33 @@
+import Header from '@/components/Header';
+import api from '@/utils/api';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Header from '@/components/Header';
+export async function getServerSideProps() {
+  try {
+    const response = await api.get('/api/v1/job-type-test', {
+      timeout: 5000,
+    });
+    return {
+      props: {
+        data: response.data.data,
+      },
+    };
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return {
+      props: {
+        data: null,
+      },
+    };
+  }
+}
 
-// export async function getServerSideProps() {
-//   try {
-//     const response = await api.get('/api/v1/job-type-test');
-//     return {
-//       props: {
-//         data: response.data.data,
-//       },
-//     };
-//   } catch (error) {
-//     console.error('Error fetching data:', error);
-//     return {
-//       props: {
-//         data: null,
-//       },
-//     };
-//   }
-// }
+interface HomePageProps {
+  data: { totalCount: number };
+}
 
-export default function HomePage() {
+export default function HomePage({ data }: HomePageProps) {
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-blue-500 to-[#3B54FF]">
       <Header />
@@ -67,11 +73,11 @@ export default function HomePage() {
             </span>
           </button>
         </Link>
-        {/* {data && (
+        {data && (
           <div className="mt-3 w-full text-center font-gmarket-sans text-sm tracking-tight text-white">
             지금까지 <span className="font-bold">{data.totalCount}번 </span>플레이됐어요!
           </div>
-        )} */}
+        )}
       </div>
     </div>
   );
